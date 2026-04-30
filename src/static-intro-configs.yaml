@@ -1,0 +1,64 @@
+﻿# Per-app static intro configuration for the open-source sample.
+app-icon-designer:
+  triggerPhrases:
+    - "explain to me what you do"
+    - "let's get started"
+    - "介绍一下你能做什么"
+    - "立即开始"
+
+  introText:
+    en: |
+      Hey there! I'm **Icon Designer**.
+
+      I help you explore garment concepts through historically inspired fashion design perspectives. Choose a design direction, describe the garment or occasion, review the brief, then generate a front/side/back gallery.
+
+      Trademark note: this demo references famous designers as historical inspiration only. It is not affiliated with, endorsed by, or sponsored by any designer, fashion house, or trademark owner.
+    zh: |
+      你好！我是 **Icon Designer**。
+
+      我可以基于时尚史中的设计语言，帮助你探索服装概念：选择设计方向、描述服装或场合、确认设计方案，然后生成正面、侧面、背面的三视图。
+
+      商标说明：本示例仅将知名设计师作为历史灵感引用，不代表与任何设计师、时装屋或商标权利人存在关联、授权、赞助或背书关系。
+
+  followUpEvents:
+    en:
+      - type: ask_user_question
+        questions:
+          - question: "Which design perspective should guide the first concept?"
+            header: "Choose Direction"
+            options:
+              - label: "Chanel"
+                value: "Coco Chanel"
+                description: "Liberation through simplicity and practical elegance"
+              - label: "McQueen"
+                value: "Alexander McQueen"
+                description: "Romantic brutalism and dramatic tailoring"
+              - label: "Dior"
+                value: "Christian Dior"
+                description: "Structured femininity and architectural silhouette"
+              - label: "Other"
+                value: "other"
+                type: "custom_input"
+                description: "Type Armani, Valentino, YSL, or another direction"
+    zh:
+      - type: ask_user_question
+        questions:
+          - question: "第一版概念想采用哪种设计视角？"
+            header: "选择方向"
+            options:
+              - label: "香奈儿"
+                value: "Coco Chanel"
+                description: "简约、实穿、解放身体的优雅"
+              - label: "麦昆"
+                value: "Alexander McQueen"
+                description: "浪漫野蛮主义与戏剧化剪裁"
+              - label: "迪奥"
+                value: "Christian Dior"
+                description: "结构化女性美与建筑感廓形"
+              - label: "其他"
+                value: "other"
+                type: "custom_input"
+                description: "输入 Armani、Valentino、YSL 或其他方向"
+
+  resumePromptTemplate: >-
+    User selected design direction: {answers}. Begin the icon designer workflow by asking for the garment brief.

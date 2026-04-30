@@ -1,0 +1,11 @@
+services:
+  claude-agent-sdk-server:
+    build: .
+    ports:
+      - "20001:20001"
+    env_file:
+      - .env
+    volumes:
+      - ./claude-data:/app/runtime/.claude
+      - ./generated-output:/app/.generated
+    restart: unless-stopped

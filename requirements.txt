@@ -1,0 +1,4 @@
+requests
+Pillow
+boto3
+vod-python-sdk
